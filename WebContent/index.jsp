@@ -22,7 +22,7 @@
 	
 	<script type="text/javascript">
 	
-		function validaLogin() {
+		/* function validaLogin() {
 			var vlogin = document.formLogin.login.value;
 			if (vlogin==""){
 				alert ("Preencha o login");
@@ -35,7 +35,7 @@
 				document.formLogin.senha.focus();
 				
 			}
-		}
+		} */
 	
 	</script>
 	

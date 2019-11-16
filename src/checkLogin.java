@@ -1,5 +1,6 @@
 
 
+import java.awt.Window;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -48,11 +49,28 @@ public class checkLogin extends HttpServlet {
 			AdministradorDAO dao = new AdministradorDAO();
 			
 			if (dao.checkLogin(login, senha)){
-				response.sendRedirect("Chamados.jsp");
+				PrintWriter writer = response.getWriter();
+				writer.println("<html><head>");
+				writer.println("<script>");
+				writer.println("alert('Logado com sucesso')");
+				writer.println("window.location=\"Chamados.jsp\";");
+				writer.println("</script>");
+				writer.println("</head>");
+				writer.println("<body></body></html>");
+				writer.close();
+				//response.sendRedirect("Chamados.jsp");
 			}
 			else{
-				//JOptionPane.showMessageDialog(null, "Login ou senha não confere");
-				response.sendRedirect("index.jsp");
+				PrintWriter writer = response.getWriter();
+				writer.println("<html><head>");
+				writer.println("<script>");
+				writer.println("alert('Login ou senha não confere')");
+				writer.println("window.location=\"index.jsp\";");
+				writer.println("</script>");
+				writer.println("</head>");
+				writer.println("<body></body></html>");
+				writer.close();
+				//response.sendRedirect("index.jsp");
 			}
 			
 		} catch (ClassNotFoundException e) {
