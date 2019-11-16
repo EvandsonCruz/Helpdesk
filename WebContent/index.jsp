@@ -19,6 +19,26 @@
 
 	<!--Custom styles-->
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	
+	<script type="text/javascript">
+	
+		function validaLogin() {
+			var vlogin = document.formLogin.login.value;
+			if (vlogin==""){
+				alert ("Preencha o login");
+				document.formLogin.login.focus();
+				
+			}
+			var vsenha = document.formLogin.senha.value;
+			if (vsenha==""){
+				alert ("Preencha a senha");
+				document.formLogin.senha.focus();
+				
+			}
+		}
+	
+	</script>
+	
 </head>
 <body>
 <div class="container">
@@ -31,25 +51,25 @@
 				</div>
 			</div>
 			<div class="card-body">
-				<form>
+				<form name="formLogin" method="post" action="${pageContext.request.contextPath}/checkLogin">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="username">
+						<input type="text" class="form-control" placeholder="login" name="login">
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="password">
+						<input type="password" class="form-control" placeholder="senha" name="senha">
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox">Remember Me
 					</div>
 					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-right login_btn">
+						<input type="submit" value="Login" onclick="validaLogin()"  class="btn float-right login_btn">
 					</div>
 				</form>
 			</div>

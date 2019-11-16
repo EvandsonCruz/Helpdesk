@@ -8,7 +8,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="lib/mssql-jdbc-7.2.2.jre8.jar"/>
 	<classpathentry kind="lib" path="lib/annotations-api.jar"/>
 	<classpathentry kind="lib" path="lib/catalina-ant.jar"/>
 	<classpathentry kind="lib" path="lib/catalina-ha.jar"/>
@@ -38,5 +37,6 @@
 	<classpathentry kind="lib" path="lib/tomcat-util.jar"/>
 	<classpathentry kind="lib" path="lib/tomcat-websocket.jar"/>
 	<classpathentry kind="lib" path="lib/websocket-api.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mssql-jdbc-7.2.2.jre8.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

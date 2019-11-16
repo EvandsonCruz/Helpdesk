@@ -31,6 +31,7 @@ public class AdministradorDAO {
 		ps.close();
 	}
 	
+	
 	public boolean checkLogin(String login,String senha){
 		boolean check = false;
 		PreparedStatement ps = null;
