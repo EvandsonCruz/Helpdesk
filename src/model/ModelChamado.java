@@ -10,6 +10,8 @@ public class ModelChamado {
 	private String fila;
 	private String atendimento;
 	private String cliente;
+	private String resposta;
+	
 	
 	public int getIdChamado() {
 		return idChamado;
@@ -58,6 +60,12 @@ public class ModelChamado {
 	}
 	public void setCliente(String cliente) {
 		this.cliente = cliente;
+	}
+	public String getResposta() {
+		return resposta;
+	}
+	public void setResposta(String resposta) {
+		this.resposta = resposta;
 	}
 	
 	

@@ -22,7 +22,7 @@ public class ChamadoDAO {
 	}
 	
 	public void insereChamado(ModelChamado cha) throws SQLException{
-		String sql = "insert into Chamado (idade,assunto,estado,disponibilidade,fila,atendimento,cliente) values (?,?,'aberto',?,'fila2',?,?)";
+		String sql = "insert into Chamado (idade,assunto,estado,disponibilidade,fila,atendimento,cliente,resposta) values (?,?,'aberto',?,'fila2',?,?,?)";
 		PreparedStatement ps = c.prepareStatement(sql);
 		ps.setString(1, cha.getIdade());
 		ps.setString(2, cha.getAssunto());
@@ -31,6 +31,7 @@ public class ChamadoDAO {
 		ps.setString(5, cha.getFila());
 		ps.setString(6, cha.getAtendimento());
 		ps.setString(7, cha.getCliente());
+		ps.setString(8, cha.getResposta());
 		ps.execute();
 		ps.close();
 	}
@@ -54,6 +55,7 @@ public class ChamadoDAO {
 			cha.setFila(rs.getString("fila"));
 			cha.setAtendimento(rs.getString("atendimento"));
 			cha.setCliente(rs.getString("cliente"));
+			cha.setResposta(rs.getString("resposta"));
 			lista.add(cha);
 		}
 		ps.close();
