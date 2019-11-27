@@ -22,16 +22,33 @@ public class ChamadoDAO {
 	}
 	
 	public void insereChamado(ModelChamado cha) throws SQLException{
-		String sql = "insert into Chamado (idade,assunto,estado,disponibilidade,fila,atendimento,cliente,resposta) values (?,?,'aberto',?,'fila2',?,?,?)";
+		String sql = "insert into Chamado (idChamado,idade,assunto,estado,disponibilidade,fila,atendimento,cliente,resposta) values (?,?,?,'aberto',?,'fila2',?,?,?)";
 		PreparedStatement ps = c.prepareStatement(sql);
-		ps.setString(1, cha.getIdade());
-		ps.setString(2, cha.getAssunto());
-		ps.setString(3, cha.getEstado());
-		ps.setString(4, cha.getDisponibilidade());
-		ps.setString(5, cha.getFila());
-		ps.setString(6, cha.getAtendimento());
-		ps.setString(7, cha.getCliente());
-		ps.setString(8, cha.getResposta());
+		ps.setInt(1, cha.getIdChamado());
+		ps.setString(2, cha.getIdade());
+		ps.setString(3, cha.getAssunto());
+		ps.setString(4, cha.getEstado());
+		ps.setString(5, cha.getDisponibilidade());
+		ps.setString(6, cha.getFila());
+		ps.setString(7, cha.getAtendimento());
+		ps.setString(8, cha.getCliente());
+		ps.setString(9, cha.getResposta());
+		ps.execute();
+		ps.close();
+	}
+	
+	public void alteraChamado(ModelChamado cha) throws SQLException{
+		String sql = "update Chamado set idChamado=?,idade=?,assunto=?,estado=?,disponibilidade=?,fila=?,atendimento=?,cliente=?,resposta=?";
+		PreparedStatement ps = c.prepareStatement(sql);
+		ps.setInt(1, cha.getIdChamado());
+		ps.setString(2, cha.getIdade());
+		ps.setString(3, cha.getAssunto());
+		ps.setString(4, cha.getEstado());
+		ps.setString(5, cha.getDisponibilidade());
+		ps.setString(6, cha.getFila());
+		ps.setString(7, cha.getAtendimento());
+		ps.setString(8, cha.getCliente());
+		ps.setString(9, cha.getResposta());
 		ps.execute();
 		ps.close();
 	}

@@ -12,19 +12,19 @@
 		<!-- Default form contact -->
 	<div class="container">
 	<div class="d-flex justify-content-center h-100">
-<form class="text-center border border-light p-5" action="$context[/insereUsuario">
+<form class="text-center border border-light p-5" action="${pageContext.request.contextPath}/insereAdministrador">
 
     <p class="h4 mb-4">Usuario</p>
 
     <!-- Name -->
     <input type="text" id="id" class="form-control mb-4" placeholder="id">
-    <input type="text" id="nome" class="form-control mb-4" placeholder="nome">
+    <input type="text" id="login" class="form-control mb-4" placeholder="login">
     <input type="password" id="senha" class="form-control mb-4" placeholder="senha">
-    <select class="browser-default custom-select mb-4">
+    <select class="browser-default custom-select mb-4" id="privilegio">
         <option value="" disabled>Choose option</option>
-        <option value="1" selected>Administrador</option>
-        <option value="2" selected>Efetivo</option>
-        <option value="3" selected>Estagiario</option>
+        <option value="Administrador" selected>Administrador</option>
+        <option value="Efetivo" selected>Efetivo</option>
+        <option value="Estagiario" selected>Estagiario</option>
     </select>
     
     

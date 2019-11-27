@@ -21,12 +21,12 @@ public class AdministradorDAO {
 		this.datasource = datasource;
 	}
 	
-	public void insereAdministrador(ModelAdministrador adm) throws SQLException{
+	public void insereAdministrador(String login,String senha, String privilegio) throws SQLException{
 		String sql = "insert into Administrador (login,senha,privilegio) values (?,?,?)";
 		PreparedStatement ps = c.prepareStatement(sql);
-		ps.setString(1, adm.getLogin());
-		ps.setString(2, adm.getSenha());
-		ps.setString(3, adm.getPrivilegio());
+		ps.setString(1, login);
+		ps.setString(2, senha);
+		ps.setString(3, privilegio);
 		ps.execute();
 		ps.close();
 	}

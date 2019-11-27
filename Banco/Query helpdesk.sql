@@ -6,6 +6,7 @@ create table Administrador(
 idAdministrador int identity not null,
 login varchar(100) not null,
 senha varchar(100) not null,
+privilegio varchar(15) not null,
 primary key(idAdministrador))
 
 insert into Administrador values (1,'admin','admin','Administrador')
