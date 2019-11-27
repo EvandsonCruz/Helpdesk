@@ -13,7 +13,7 @@
 <body>
 
 <div class="container">
-  <h2>Chamados</h2> 
+  <h2>Chamados <a href="Usuario.jsp" style="color: white;">*</a></h2> 
   <input class="form-control" id="myInput" type="text" placeholder="Pesquisar...">
   <br>
   <table class="table table-bordered table-striped">
@@ -30,7 +30,36 @@
       </tr>
     </thead>
     <tbody id="myTable" >
-     <a href="${pageContext.request.contextPath}/ReadAllChamado">
+    <tr>
+        <td><a href="getChamado.jsp" target="blank">0001</a></td>
+          <td>2019-11-26</td>
+              <td>Pc não liga</td>
+              <td>Aberto</td>
+              <td>Desbloqueado</td>
+              <td>Fila2</td>
+              <td>Evandson</td>
+              <td>Zezinho</td>
+      </tr>
+      <tr>
+        <td><a href="getChamado.jsp" target="blank">0002</a></td>
+          <td>2019-11-26</td>
+              <td>Criar email</td>
+              <td>Aberto</td>
+              <td>Desbloqueado</td>
+              <td>Fila2</td>
+              <td>Evandson</td>
+              <td>Luizinho</td>
+      </tr>
+      <tr>
+        <td><a href="getChamado.jsp" target="blank">0003</a></td>
+          <td>2019-11-26</td>
+              <td>Alterar Servidor</td>
+              <td>Aberto</td>
+              <td>Bloqueado</td>
+              <td>Fila3</td>
+              <td>Evandson</td>
+              <td>Mariazinha</td>
+      </tr>
     </tbody>
   </table>
   

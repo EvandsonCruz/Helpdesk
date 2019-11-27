@@ -42,13 +42,30 @@ public class ReadAllChamado extends HttpServlet {
 				 writer.println("<td>");
 				 mc.getIdChamado();
 				 writer.println("</td>");
-			        /*<td>1mc.getIdade()</td>
-			        <td>Pc não liga</td>
-			        <td>Aberto</td>
-			        <td>Desbloqueado</td>
-			        <td>fila2</td>
-			        <td>Evandson</td>
-			        <td>Antonio</td>*/
+				 writer.println("<td>");
+				 mc.getIdade();
+				 writer.println("</td>");
+				 writer.println("<td>");
+				 mc.getAssunto();
+				 writer.println("</td>");
+				 writer.println("<td>");
+				 mc.getEstado();
+				 writer.println("</td>");
+				 writer.println("<td>");
+				 mc.getDisponibilidade();
+				 writer.println("</td>");
+				 writer.println("<td>");
+				 mc.getFila();
+				 writer.println("</td>");
+				 writer.println("<td>");
+				 mc.getAtendimento();
+				 writer.println("</td>");
+				 writer.println("<td>");
+				 mc.getCliente();
+				 writer.println("</td>");
+				 writer.println("<td>");
+				 mc.getResposta();
+				 writer.println("</td>");
 				 writer.println("</tr>");
 			 }
 			 
